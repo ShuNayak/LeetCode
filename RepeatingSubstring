@@ -1,0 +1,9 @@
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        if not s:
+            return False
+        S = (s+s)[1:-1]
+        return S.find(s)!=-1
+
+obj = Solution()
+print(obj.repeatedSubstringPattern("abcabc"))
